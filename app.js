@@ -5,13 +5,14 @@ const app = express();
 dotenv.config({ path: "./config.env" }); //use dotenv for secure code
 const PORT = process.env.PORT || 3000;
 const cookiesParser = require("cookie-parser");
+const cors = require("cors");
+//Database connection
+require("./db/connDB");
 // middleware
 app.use(express.json()); // <-- convert json data into object
 //cookies parser
 app.use(cookiesParser());
-
-//Database connection
-require("./db/connDB");
+app.use(cors());
 
 //routing
 app.use(router);
