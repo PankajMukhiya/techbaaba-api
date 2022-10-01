@@ -1,0 +1,9 @@
+# NODE MODULE FOLDER
+/node_modules
+node_modules
+
+# ENV FILE
+config.env
+
+# 
+
